@@ -15,6 +15,9 @@ export function monthView(month) {
   }
 }
 export function taskCreate(task) {
+  //TODO: HTTP CALL TO SERVER
+  //const request = axios.post(url, data);
+  //Payload in this case would be task
   return {
     type: TASK_CREATE,
     payload: task
