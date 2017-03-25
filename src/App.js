@@ -12,6 +12,9 @@ import Calendar from './components/calendar/Calendar';
 import DayView from './components/day/Day.js';
 
 class App extends Component {
+  componentDidMount() {
+    console.log(this.props);
+  }
   render() {
     return (
       <Router>
@@ -29,15 +32,15 @@ class App extends Component {
                 <Row>
                   <Col md={12}>
                     <ul>
-                      <li><Link to="/">Home</Link></li>
-                      <li><Link to="/calendar">Calendar</Link></li>
+                      <li><Link to="/hubstack/">Home</Link></li>
+                      <li><Link to="/hubstack/calendar">Calendar</Link></li>
                     </ul>
                   </Col>
                 </Row>
               </Col>
               <Col md={10}>
-                <Route exact path="/calendar" component={ Calendar }></Route>
-                <Route exact path="/calendar/day" component={ DayView }></Route>
+                <Route exact path="/hubstack/calendar" component={ Calendar }></Route>
+                <Route exact path="/hubstack/calendar/day" component={ DayView }></Route>
               </Col>
             </Row>
           </Grid>
