@@ -17,10 +17,10 @@
 * Settings
   * CRUD Locations
 
-* Notes
-  * Some sort of Notes application similar to Apple's Notes
+* Notes || Todo 
+  * Some sort of Notes application similar to Apple's Notes or a quick TODO List
 
-## Back End
+## Back End (Node+Express OR Firebase)
 * Passport
   * For Google Auth 
 
