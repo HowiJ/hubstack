@@ -10,6 +10,7 @@ import { Grid, Row, Col } from 'react-bootstrap';
 // Components
 import Calendar from './components/calendar/Calendar';
 import DayView from './components/day/Day.js';
+import Temp from './components/temp_home';
 
 class App extends Component {
   componentDidMount() {
@@ -39,6 +40,7 @@ class App extends Component {
                 </Row>
               </Col>
               <Col md={10}>
+                <Route exact path="/hubstack" component={ Temp }></Route>
                 <Route exact path="/hubstack/calendar" component={ Calendar }></Route>
                 <Route exact path="/hubstack/calendar/day" component={ DayView }></Route>
               </Col>
