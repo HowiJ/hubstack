@@ -18,7 +18,7 @@
   * CRUD Locations
 
 * Notes
-  * Some sort of Notes application similar to 
+  * Some sort of Notes application similar to Apple's Notes
 
 ## Back End
 * Passport
