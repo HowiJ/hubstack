@@ -58,7 +58,7 @@ class Day extends Component {
           </Col>
         </Row>
 
-        {this.state.direct && <Redirect push to={{pathname: '/calendar/day', state: {from: this.props.location}}} />}
+        {this.state.direct && <Redirect push to={{pathname: '/hubstack/calendar/day', state: {from: this.props.location}}} />}
       </td>
     )
   }
