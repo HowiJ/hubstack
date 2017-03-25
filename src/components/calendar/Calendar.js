@@ -12,11 +12,16 @@ import { monthView } from '../../actions/index';
 // Each Day
 import Day from './components/day/Day';
 
-
+// TODO: repeats
 function filterTasksForDay(task, day) {
-  if (task.date_from.format('DD MMMM YYYY') === day.format('DD MMMM YYYY')) {
+  // If the date from is same as the day
+  if (moment(task.date_from).format('DD MMMM YYYY') === day.format('DD MMMM YYYY')) {
     return true;
   }
+  // If day is between datefrom and dateto
+  // If day is x and repeat[x] is true. IE: Monday: repeat['mon'] === true
+  // If repeat.monthly === true && dates match
+  // If repeat.yearly === true && months match && the dates match
   return false
 }
 // Each Week has 7 days

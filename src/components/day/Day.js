@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import { Grid, Row, Col } from 'react-bootstrap';
+import { Link, Glyphicon } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { taskShow } from '../../actions/index';
+import moment from 'moment';
 import tasks from '../../assets/seed';
 
 class DayView extends Component{
@@ -18,26 +20,42 @@ class DayView extends Component{
   taskToElement(task) {
     return ( 
       <div key={task.title}>
+        <hr/>
         <Row>
-          <Col md={12}>{task.title}</Col>
+          <Col md={12}><h1>{task.title}</h1></Col>
         </Row>
         <Row>
-          <Col md={12}>{task.location}</Col>
+          <Col md={2}>
+            <strong>Location: </strong>
+          </Col>
+          <Col md={10}>
+            {task.location}
+          </Col>
         </Row>
         <Row>
-          <Col md={6}>{task.date_from.format('MMMM Do, YYYY at h:mm')}</Col>
-          <Col md={6}>{task.date_to.format('MMMM Do, YYYY at h:mm')}</Col>
+          <Col md={2}>
+            <strong>Date From:</strong>
+          </Col>
+          <Col md={10}>
+            {moment(task.date_from).format('MMMM Do, YYYY at h:mm')}
+          </Col>
+        </Row>
+        <Row>
+          <Col md={2}>
+            <strong>Date To:</strong>
+          </Col>
+          <Col md={10}>
+            {moment(task.date_to).format('MMMM Do, YYYY at h:mm')}
+          </Col>
+        </Row>
+        <Row>
+          <Col md={12}><h3>Notes</h3></Col>
         </Row>
         <Row>
           <Col md={12}>{task.notes}</Col>
         </Row>
       </div>
     );
-  }
-  wtfTest() {
-    return [
-      <div>Hi</div>, <div>Hello</div>
-    ]
   }
   render () {
     return (
@@ -52,6 +70,7 @@ class DayView extends Component{
           </Row>
           <Row>
             <Col md={ 12 }>
+              { this.state.tasks.length===0 && <h3>No Events/Tasks Today</h3> }
               { this.state.tasks.map(this.taskToElement) }
             </Col>
           </Row>
