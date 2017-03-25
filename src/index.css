@@ -1,0 +1,45 @@
+div.Calendar .Title.middle {
+  background: green;
+  color: white;
+}
+div.Calendar .middle {
+  text-align: center;
+}
+div.Calendar .month {
+  background: gray;
+  color: white;
+}
+.Day {
+  cursor: pointer;
+  outline: 1px solid white;
+}
+.Day * {
+  overflow-y: hidden;
+}
+.weekend {
+  background: lightgray;
+  color: white;
+}
+.today {
+  background: lightblue;
+  color: white;
+}
+.otherWeekend {
+  background: lightslategray;
+  color: white;
+}
+.otherMonth {
+  /*background: dimgray;*/
+  background: lightslategray;
+  color: lightgray;
+}
+table {
+  table-layout: fixed;
+}
+ul {
+  list-style: none;
+}
+.calendar_event_title {
+  font-size: 0.9em;
+  color: deepskyblue;
+}
